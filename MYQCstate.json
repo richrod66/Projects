@@ -1,0 +1,87 @@
+{
+  "cookies": [
+    {
+      "name": "JSESSIONID",
+      "value": "F6A795168390DDAD4C3FF96B7F9E451C",
+      "domain": "qa10-3.mmhcloud.com",
+      "path": "/myqc",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MCEK",
+      "value": "34e82522dda2815b75d917d2bdc3fa2f",
+      "domain": "qa10-3.mmhcloud.com",
+      "path": "/",
+      "expires": 1785197776.971954,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_6JJRHZZKQ4",
+      "value": "GS2.1.s1750637777$o1$g0$t1750637777$j60$l0$h0",
+      "domain": ".mmhcloud.com",
+      "path": "/",
+      "expires": 1785197777.585141,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1747660684.1750637778",
+      "domain": ".mmhcloud.com",
+      "path": "/",
+      "expires": 1785197777.585603,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALB",
+      "value": "rbQ9ClhUPQ9xVIJ0Jevl4IttIERBJtftEw4qSqJ0Qp0Cn5Sf/1KxTS0nOU6XuPLaOx8UC7t5rIAv0lhClHAUUm9m+K5IshalxWeG+hd7SorE5KonQRQx1qHxRYVL",
+      "domain": "qa10-3.mmhcloud.com",
+      "path": "/",
+      "expires": 1751242588.340973,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALBCORS",
+      "value": "rbQ9ClhUPQ9xVIJ0Jevl4IttIERBJtftEw4qSqJ0Qp0Cn5Sf/1KxTS0nOU6XuPLaOx8UC7t5rIAv0lhClHAUUm9m+K5IshalxWeG+hd7SorE5KonQRQx1qHxRYVL",
+      "domain": "qa10-3.mmhcloud.com",
+      "path": "/",
+      "expires": 1751242588.341036,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://qa10-3.mmhcloud.com",
+      "localStorage": [
+        {
+          "name": "mmh-user-session111",
+          "value": "1"
+        },
+        {
+          "name": "mmh-user-session111-1",
+          "value": "{\"id\":1,\"sessionID\":\"U2FsdGVkX18eR9nz0R/bh7/kAd4Q7nRXydLeXyhpeLcg/lq2nubPH/ElsHmxXuS/bHUha/dDwep+5BKMIs5/5QauNNwyxZMwg1PH7IXQMPyurKhyWIyypabgxkQLqXDH8a21Og/pAxiLZMGpbestUw==PTDgKbqzIB\",\"location\":\"https://qa10-3.mmhcloud.com/myqc\",\"forcePassword\":false,\"code\":\"U2FsdGVkX1+NOZ3dnmUbI3zxWdhieUe/WgsX1y65K58=PTDgKbqzIB\",\"keepLogged\":false,\"checkFingerprintOnDevice\":false,\"resumeApp\":false,\"badge\":\"U2FsdGVkX1+UuyROCSANugy7FHCQcNxoiiUMg4Kforg=PTDgKbqzIB\",\"order\":\"\",\"orderHistory\":\"\",\"publicName\":\"RIVI103\",\"voucherPurchase\":\"\",\"futureOrderDate\":\"\"}"
+        },
+        {
+          "name": "mmh_app_version",
+          "value": "7.3.19"
+        },
+        {
+          "name": "mmh_instance_codes",
+          "value": "[{\"CODE\":\"U2FsdGVkX19nCj4SrPUyU6Ao03DHo9oEQAd5ug+Sm2o=PTDgKbqzIB\",\"ALIAS\":\"U2FsdGVkX1/GdZNyWCeyWAXXHkNbViM6lmkdvEPBABI=PTDgKbqzIB\",\"LOCATION\":\"https://qa10-3.mmhcloud.com/myqc\",\"NAME\":\"U2FsdGVkX19Hun95mdrW5J2czyonDice9tt+46oWWnc=PTDgKbqzIB\",\"INSTANCEID\":0,\"INSTANCEUSERID\":0,\"ALLOWINVALIDSSLCERTS\":false,\"USED\":1,\"PUBLICNAME\":\"\",\"GATEWAY_URL\":\"https://www.mmhcloud.com/gateway\",\"SELECTED\":true}]"
+        }
+      ]
+    }
+  ]
+}

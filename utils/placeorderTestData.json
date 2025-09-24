@@ -1,0 +1,29 @@
+[  
+    {    
+        "userName": "rich944@gmail.com",    
+        "passWord": "Kronites2!",    
+        "country": "United States",    
+        "productToPurchase": "ZARA COAT 3",    
+        "ccnumber": "3714 4963 5398 431",    
+        "ccexpirymonth": "06",    
+        "ccexpiryyear": "26",    
+        "cvv": "123",    
+        "ccname": "QA User"  
+    },
+
+        {    
+        "userName": "rich944+qa@gmail.com",    
+        "passWord": "Kronites2!",    
+        "country": "United States",    
+        "productToPurchase": "ADIDAS ORIGINAL",    
+        "ccnumber": "3714 4963 5398 431",    
+        "ccexpirymonth": "06",    
+        "ccexpiryyear": "26",    
+        "cvv": "123",    
+        "ccname": "QA User"  
+    }
+]
+
+
+
+
