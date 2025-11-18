@@ -1,2 +1,7 @@
+com\rivi\automation\Locators.class
+com\rivi\automation\POMDemo.class
+com\rivi\automation\BrowserOptions.class
 com\rivi\automation\AppTest.class
 com\rivi\automation\Test.class
+com\rivi\automation\myqcPOM.class
+com\rivi\automation\myqcTest.class
