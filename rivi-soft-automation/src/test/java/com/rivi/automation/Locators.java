@@ -10,19 +10,21 @@ public class Locators {
         System.out.println("Locators class executed");
         // Add your locator strategies here
         WebDriver driver = new ChromeDriver();
-        String qcWebURL = "https://www.mmhcloud.com/gateway/login";        
+        String qcWebURL = "https://chroma.mexil.it/site/login";        
         driver.get(qcWebURL);
         driver.manage().window().maximize();
         // Example locator usage
-        WebElement userName = driver.findElement(By.id("userName"));
-        WebElement userPass = driver.findElement(By.id("userPass"));
+        //WebElement userName = driver.findElement(By.id("userName"));
+        WebElement userName = driver.findElement(By.xpath("//*[@id=\"form-username\"]")); // Locating using full/absolute XPath
+        //WebElement userPass = driver.findElement(By.id("userPass"));
+        WebElement userPass = driver.findElement(By.xpath("//*[@id=\"form-password\"]")); // Locating using full/absolute XPath
         WebElement loginBtn = driver.findElement(By.id("loginBtn"));
         //WebElement passwordTextBox = driver.findElement(By.id("loginPassword"));
         // We'll find the qa101 element later after login, with proper error handling
         userName.click();
-        userName.sendKeys("richard.rodriguez@transactcampus.com");
+        userName.sendKeys("general@teacher.com");
         userPass.click();
-        userPass.sendKeys("Kronites2!");
+        userPass.sendKeys("123456");
         //passwordTextBox.click();
         //passwordTextBox.sendKeys("Kronites2!");
         loginBtn.click();
