@@ -1,0 +1,38 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://www.mmhcloud.com/gateway/login');
+  await page.getByRole('textbox', { name: 'Username' }).fill('');
+  await page.getByText('Login Forgot Password? Reload').click();
+  await page.getByText('Login Forgot Password? Reload').click();
+  await page.getByRole('textbox', { name: 'Username' }).click();
+  await page.getByRole('textbox', { name: 'Username' }).fill('richard.rodriguez@transactcampus.com');
+  await page.getByRole('textbox', { name: 'Password' }).click();
+  await page.getByRole('textbox', { name: 'Password' }).fill('Kronites2!');
+  await page.getByRole('button', { name: 'Login' }).click();
+  await page.getByRole('gridcell', { name: 'QA10-' }).first().click();
+  await page.getByRole('row', { name: 'QA10-4 Quickcharge QA10-' }).locator('span').click();
+  await page.getByRole('link', { name: 'Account Manager', exact: true }).click();
+  await page.locator('#s2id_clientModalSelectBox').getByRole('link').click();
+  await page.getByRole('option', { name: 'RIVI Food Service' }).click();
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await page.getByRole('button', { name: 'Selected Accounts (11)' }).click();
+  await page.locator('#accountDetailsIcon').click();
+  await page.locator('#jqg_accountEditorGrid_1000000343').check();
+  await page.getByRole('textbox', { name: 'Birthday:' }).click();
+  await page.getByRole('textbox', { name: 'Birthday:' }).fill('12/13');
+  await page.getByRole('button', { name: 'Save' }).click();
+  await page.goto('https://qa10-4.mmhcloud.com/qc/accounts');
+  await page.getByRole('button', { name: 'Selected Accounts (11)' }).click();
+  await page.locator('#accountDetailsIcon').click();
+  await page.locator('#jqg_accountEditorGrid_1000000343').check();
+  await page.getByRole('button', { name: 'History' }).click();
+  await expect(page.locator('[id="473650"]')).toContainText('Birthday');
+  await page.getByRole('gridcell', { name: 'Fri Oct 15 00:00:00 EDT' }).click();
+  await page.getByRole('gridcell', { name: 'Fri Oct 15 00:00:00 EDT' }).click();
+  await expect(page.locator('[id="473650"]')).toContainText('Fri Oct 15 00:00:00 EDT 1999');
+  await page.locator('[id="473650"]').getByRole('gridcell', { name: 'Sun Dec 12 00:00:00 EST' }).click();
+  await expect(page.locator('[id="473650"]').getByRole('gridcell', { name: 'Sun Dec 12 00:00:00 EST' })).toBeVisible();
+  await expect(page.locator('[id="473650"]').getByRole('gridcell', { name: 'Sun Dec 12 00:00:00 EST' })).toBeVisible();
+  await expect(page.locator('[id="473650"]')).toContainText('Sun Dec 12 00:00:00 EST 1999');
+});

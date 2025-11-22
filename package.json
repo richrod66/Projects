@@ -1,0 +1,30 @@
+{
+  "name": "playwriteautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "smokeTest": "npx playwright test tests/MYQCSmoke.test.js",
+    "ClientAppPO": "npx playwright test tests/clientAppPO.spec.js",
+    "CucumberRegression": "npx cucumber-js --import ./features/step_definitions/steps.js  --import ./features/support/setup.js --import features/support/hooks.js --parallel 2 --format html:cucumber-report.html --retry 1 --tags @Regression"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@azure/microsoft-playwright-testing": "^1.0.0-beta.7",
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^22.9.3",
+    "allure-playwright": "^3.2.2",
+    "install": "^0.13.0",
+    "npm": "^11.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "exceljs": "^4.4.0",
+    "playwright": "^1.55.1"
+  }
+}

@@ -1,0 +1,11 @@
+const {base} = require('@@playwright/test');
+
+exports.base.test.extend({
+  // This will be available in all tests
+  poManager: async ({ page }, use) => {
+    const POManager = require('../pageobjects/POManager');
+    const poManagerInstance = new POManager(page);
+    await use(poManagerInstance);
+  }
+  
+});  

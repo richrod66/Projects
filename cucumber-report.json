@@ -1,0 +1,226 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "ecommerce-validations;placing-the-order",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Placing the Order",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 518324399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "a login to Ecommerce application with \"rich944@gmail.com\" and \"Kronites2!\"",
+            "match": {
+              "location": "file:\\E:\\RIVISoftware\\PlaywrightAutomation\\features\\step_definitions\\steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7800620098
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Add \"ZARA COAT 3\" to Cart",
+            "match": {
+              "location": "file:\\E:\\RIVISoftware\\PlaywrightAutomation\\features\\step_definitions\\steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 127659500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Verify \"ZARA COAT 3\" is added to Cart",
+            "match": {
+              "location": "file:\\E:\\RIVISoftware\\PlaywrightAutomation\\features\\step_definitions\\steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1983470898
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Enter valid details and Place the Order",
+            "match": {
+              "location": "file:\\E:\\RIVISoftware\\PlaywrightAutomation\\features\\step_definitions\\steps.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 732142398
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Verify Order is present in the order history cart",
+            "match": {
+              "location": "file:\\E:\\RIVISoftware\\PlaywrightAutomation\\features\\step_definitions\\steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1390295000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1589099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "ecommerce-validations;checking-eror-message",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Checking eror message",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 559984899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "a login to Ecommerces2 application with \"rich944@gmail.com\" and \"<passwor>!\"",
+            "match": {
+              "location": "file:\\E:\\RIVISoftware\\PlaywrightAutomation\\features\\step_definitions\\steps.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2401851297
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Verify Error message is displayed",
+            "match": {
+              "location": "file:\\E:\\RIVISoftware\\PlaywrightAutomation\\features\\step_definitions\\steps.js:132"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2456347798
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 237398900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validations",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "ecommerce-validations;checking-eror-message",
+        "keyword": "Scenario Outline",
+        "line": 20,
+        "name": "Checking eror message",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 434980599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "a login to Ecommerces2 application with \"rrodriguez.prepaid@transactcampus.com\" and \"<passwor>!\"",
+            "match": {
+              "location": "file:\\E:\\RIVISoftware\\PlaywrightAutomation\\features\\step_definitions\\steps.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2471072199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Verify Error message is displayed",
+            "match": {
+              "location": "file:\\E:\\RIVISoftware\\PlaywrightAutomation\\features\\step_definitions\\steps.js:132"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2393579498
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 228096999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validations",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "ecommerce-validations",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Ecommerce validations",
+    "tags": [],
+    "uri": "features\\Ecommerce.feature"
+  }
+]
