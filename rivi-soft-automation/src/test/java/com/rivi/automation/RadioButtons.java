@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class RadioButtons {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException{
        
         WebDriver driver = new ChromeDriver();
 
@@ -31,17 +31,22 @@ public class RadioButtons {
 
         //Using index to handle radio buttons
     
-        WebElement radio1 = driver.findElement(By.xpath("//input[@value='radioButton'])[1]"));
-        WebElement radio2 = driver.findElement(By.xpath("//input[@value='radioButton'])[2]"));
-        WebElement radio3 = driver.findElement(By.xpath("//input[@value='radioButton'])[3]"));
+        WebElement radio1 = driver.findElement(By.xpath("(//input[@name='radioButton'])[1]"));
+        WebElement radio2 = driver.findElement(By.xpath("(//input[@name='radioButton'])[2]"));
+        WebElement radio3 = driver.findElement(By.xpath("(//input[@name='radioButton'])[3]"));
     
     
         radio1.click();
-        System.out.println("Radio 1 selected: " + radio1.isSelected()); 
+        System.out.println("Radio 1 selected: " + radio1.isSelected());
+        Thread.sleep(2000);
+        
         radio2.click();
         System.out.println("Radio 2 selected: " + radio2.isSelected());
+        Thread.sleep(2000);
+
         radio3.click();
         System.out.println("Radio 3 selected: " + radio3.isSelected());
+        Thread.sleep(2000);
 
     
     
