@@ -2,6 +2,7 @@ package com.rivi.automation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -14,10 +15,11 @@ public class Dropdowns {
         driver.manage().window().maximize();    
         driver.get(URL);
 
-        Select dropdowns = new Select(driver.findElement(By.xpath("//*[@id='dropdown-class-example']")));
+        WebElement dropdown = driver.findElement(By.xpath("//*[@id='dropdown-class-example']"));
+
+        Select select = new Select(dropdown); 
+        select.selectByIndex(2);
 
     }
 
-    }
-    
 }
