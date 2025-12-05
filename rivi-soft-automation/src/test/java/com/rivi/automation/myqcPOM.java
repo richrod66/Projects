@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+@SuppressWarnings("null")
 public class myqcPOM {
 
     // Define locators for myQC login page
@@ -65,25 +66,41 @@ public class myqcPOM {
 
             // Wait for and click Get Started button
             WebElement getStartedBtn = wait.until(ExpectedConditions.elementToBeClickable(GET_STARTED_BUTTON));
-            getStartedBtn.click();
-            System.out.println("Clicked Get Started button");
+            if (getStartedBtn != null) {
+                getStartedBtn.click();
+                System.out.println("Clicked Get Started button");
+            } else {
+                throw new RuntimeException("Get Started button not found");
+            }
 
             // Enter username
             WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(USERNAME_FIELD));
-            usernameField.clear();
-            usernameField.sendKeys(username);
-            System.out.println("Entered username");
+            if (usernameField != null) {
+                usernameField.clear();
+                usernameField.sendKeys(username);
+                System.out.println("Entered username");
+            } else {
+                throw new RuntimeException("Username field not found");
+            }
 
             // Enter password
-            WebElement passwordField = driver.findElement(PASSWORD_FIELD);
-            passwordField.clear();
-            passwordField.sendKeys(password);
-            System.out.println("Entered password");
+            WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_FIELD));
+            if (passwordField != null) {
+                passwordField.clear();
+                passwordField.sendKeys(password);
+                System.out.println("Entered password");
+            } else {
+                throw new RuntimeException("Password field not found");
+            }
 
             // Click login button
-            WebElement loginButton = driver.findElement(LOGIN_BUTTON);
-            loginButton.click();
-            System.out.println("Clicked login button");
+            WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(LOGIN_BUTTON));
+            if (loginButton != null) {
+                loginButton.click();
+                System.out.println("Clicked login button");
+            } else {
+                throw new RuntimeException("Login button not found");
+            }
 
             // Wait for login to complete and verify
             Thread.sleep(3000); // Wait for page to load
@@ -110,6 +127,12 @@ public class myqcPOM {
             // Wait for the logged-in user element to be visible
             WebElement loggedInUserElement = wait
                     .until(ExpectedConditions.visibilityOfElementLocated(LOGGED_IN_ACCOUNT));
+            
+            if (loggedInUserElement == null) {
+                System.err.println("Logged-in user element not found");
+                return false;
+            }
+            
             String loggedInUser = loggedInUserElement.getText().trim();
 
             System.out.println("Logged in user: " + loggedInUser);
@@ -134,7 +157,13 @@ public class myqcPOM {
         try {
             WebElement loggedInUserElement = wait
                     .until(ExpectedConditions.visibilityOfElementLocated(LOGGED_IN_ACCOUNT));
-            return loggedInUserElement.getText().trim();
+            
+            if (loggedInUserElement != null) {
+                return loggedInUserElement.getText().trim();
+            } else {
+                System.err.println("Logged-in user element not found");
+                return "";
+            }
         } catch (Exception e) {
             System.err.println("Failed to get logged-in user: " + e.getMessage());
             return "";
