@@ -18,7 +18,7 @@ public class Alerts {
 
         driver.get(URL);
 
-        WebElement alertButton = driver.findElement(By.xpath("//input[@id='alertbtn']"));
+        //WebElement alertButton = driver.findElement(By.xpath("//input[@id='alertbtn']"));
         WebElement confirmButton = driver.findElement(By.xpath("//input[@id='confirmbtn']"));
         WebElement alertTextBox = driver.findElement(By.xpath("//input[@id='name']"));
 
