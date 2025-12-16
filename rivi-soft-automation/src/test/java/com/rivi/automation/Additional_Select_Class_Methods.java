@@ -32,6 +32,18 @@ public class Additional_Select_Class_Methods {
         System.out.println("First selected option: " + firstSelectedOption.getText());  
 
 
+        // //Check if multiple selection is allowed
+        boolean isMultiple = select.isMultiple();
+        System.out.println("Is multiple selection allowed? " + isMultiple); 
+
+        // //retreive all available options
+        System.out.println("Available options in the dropdown:");  
+        for (WebElement option : select.getOptions()) {
+            System.out.println(" - " + option.getText());
+        }   
+
+
+
         driver.quit();
     }
 }
