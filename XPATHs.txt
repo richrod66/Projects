@@ -1,0 +1,17 @@
+(//button[@type="button"])[1]
+
+
+//label[contains(text(),' Option 1')]
+//label[contains(text(),' Option 2')]
+//label[contains(text(),' Option 3')]
+//label[contains(text(),' Option 4')]
+
+
+//label[@class="dropdown-item"]
+
+//input[@name='show-hide']
+//input[@value='Hide']
+//input[@value='Show']
+
+
+

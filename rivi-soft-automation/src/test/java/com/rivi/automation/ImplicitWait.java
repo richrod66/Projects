@@ -1,5 +1,8 @@
 package com.rivi.automation;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,22 +17,25 @@ public class ImplicitWait {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(60));
+
+        //Declaring Implicit Wait
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+    
         Actions action = new Actions(driver);   
         String URL = "https://chroma-tech-academy.mexil.it/static_page/";
 
         driver.get(URL);
 
+        WebElement youtube = driver.findElement(By.xpath("(//li[@class='gf-li'])[18]/a"));
+        // WebElement aboutUsLink = driver.findElement(By.xpath("//a[text()='About Us']")); 
+        // System.out.println("Created the aboutUsLink WebElement object");
+        // action.moveToElement(aboutUsLink).perform();
 
-        WebElement aboutUsLink = driver.findElement(
-            org.openqa.selenium.By.xpath("//a[text()='About Us']")
-        );  
+        action.moveToElement(youtube).perform();
+        youtube.click();
 
-        // wait.until(ExpectedConditions.visibilityOf(aboutUsLink);
-
-
-        
-        action.moveToElement(aboutUsLink).perform();
+        driver.quit();
 
         
 
