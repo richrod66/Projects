@@ -24,7 +24,7 @@ public class Frames {
             actions.moveToElement(restAPILink).perform();
 
             // Locating iframe element with xpath
-            WebElement iframeElement = driver.findElement(By.xpath("//iframe[@name='iframe-name']")); 
+            //WebElement iframeElement = driver.findElement(By.xpath("//iframe[@name='iframe-name']")); 
             
             //Switching to the iframe using WebElement
             //driver.switchTo().frame(iframeElement);
