@@ -18,12 +18,15 @@ public class Hard_Assertions {
         driver.get(URL);
 
 
-    String expectedTitle = "Chroma Tech Academy1";
-    String actualTitle = driver.getTitle();
+        String expectedTitle = "Chroma Tech Academy1";
+        String actualTitle = driver.getTitle();
 
-       Assert.assertEquals(actualTitle, expectedTitle, "Title does not match! Test Failed.");
+        //Assert.assertEquals(actualTitle, expectedTitle, "Verifying page title");
+        System.out.println("Testing...");
 
-
+        boolean isPageTitleCorrect = actualTitle.contentEquals(expectedTitle);
+        
+        Assert.assertTrue(isPageTitleCorrect, "Does the title match?");
 
         driver.quit();
         
