@@ -8,7 +8,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-@SuppressWarnings("null")
 public class myqcPOM {
 
     // Define locators for myQC login page
