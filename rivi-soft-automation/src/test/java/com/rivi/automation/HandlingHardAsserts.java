@@ -20,7 +20,7 @@ public class HandlingHardAsserts {
         driver.get(url);
 
 
-                String expectedTitle = "Chroma Tech Academy";
+        String expectedTitle = "Chroma Tech Academy";
         String actualTitle = driver.getTitle();
 
         String actualPageURL = driver.getCurrentUrl();
@@ -30,17 +30,11 @@ public class HandlingHardAsserts {
         String expectedInstructorJohnText = "John";
 
 
-        try {
+        
             Assert.assertEquals(actualTitle, expectedTitle, " Title verification failed!");
             Assert.assertEquals(actualPageURL, expectedPageURL, " Page URL verification failed!");
             Assert.assertEquals(actualInstructorJohnText.getText(), expectedInstructorJohnText, " Instructor John text verification failed!");
 
-        } catch (AssertionError e) {
-            System.out.println("Title assertion failed: " + e.getMessage());
-        }
-        
-
-
-        driver.quit();
+            driver.quit();
     }
 }
