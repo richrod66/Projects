@@ -40,7 +40,7 @@ public class ExplicitWaits {
         wait.until(ExpectedConditions.elementToBeClickable(bootstrapDropDown));
         bootstrapDropDown.click(); 
         
-        WebElement Option3 = driver.findElement(By.xpath("(//input[@type='checkbox'])[3]"));
+        //WebElement Option3 = driver.findElement(By.xpath("(//input[@type='checkbox'])[3]"));
        
        
        
