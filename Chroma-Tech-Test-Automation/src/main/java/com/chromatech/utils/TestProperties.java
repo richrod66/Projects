@@ -7,10 +7,9 @@ public class TestProperties {
     //public static final String BROWSER = "firefox";
     //public static final String BROWSER = "edge";
 
-    
-    // Set the base URL for testing 
+    // Set the base URL for testing
     public static final String BASE_URL = "https://www.google.com";
     
-    
-
+    // Test data
+    public static final String TEST_EMAIL = "rich944@gmail.com";
 }

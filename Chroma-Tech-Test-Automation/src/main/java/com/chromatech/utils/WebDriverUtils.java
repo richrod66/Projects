@@ -4,39 +4,46 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import java.time.Duration;
 
 public class WebDriverUtils {
 
     public static WebDriver driver;
+    public static WebDriverWait wait;
 
     public static void initBrowser() {
-        
-    switch (TestProperties.BROWSER.toLowerCase()) {
-        case "chrome":
-            driver = new ChromeDriver();
-            break;
-        case "firefox":
-            driver = new FirefoxDriver();
-            break;
-        case "edge":
-            driver = new EdgeDriver();
-            break;
-        default:
-            throw new IllegalArgumentException("Unsupported browser: " + TestProperties.BROWSER);
+        // Setup WebDriverManager to automatically download and configure drivers
+        switch (TestProperties.BROWSER.toLowerCase()) {
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+                break;
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+                break;
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+                break;
+            default:
+                throw new IllegalArgumentException("Unsupported browser: " + TestProperties.BROWSER);
         }
 
-    driver.manage().window().maximize();
-    driver.manage().deleteAllCookies();
-    driver.manage().timeouts().pageLoadTimeout(java.time.Duration.ofSeconds(30));
-    driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
-
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        
+        // Initialize explicit wait
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
-
-    public static void tearDown() throws InterruptedException {
-        Thread.sleep(2000);
-        driver.quit();
-    }   
-    
-    
+    public static void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }
