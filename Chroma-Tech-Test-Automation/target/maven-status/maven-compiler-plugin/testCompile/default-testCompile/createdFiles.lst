@@ -1,1 +1,3 @@
+com\chromatech\runners\RunTests.class
+com\chromatech\stepDefinitions\LoginSteps.class
 com\chromatech\GoogleSignInTest.class

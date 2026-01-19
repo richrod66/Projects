@@ -1,5 +1,6 @@
 Feature: Login Scenarios
 
+    @smoke
     Scenario: Login
         Given a user is on the login page
         When the user enters a valid username in the username text box
