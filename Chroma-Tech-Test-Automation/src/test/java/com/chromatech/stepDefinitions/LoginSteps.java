@@ -4,6 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import com.chromatech.utils.WebDriverUtils;
+
+import org.openqa.selenium.By;
+
 import com.chromatech.utils.TestProperties;
 
 public class LoginSteps {
@@ -18,6 +21,9 @@ public class LoginSteps {
     @When("the user enters a valid username in the username text box")
     public void the_user_enters_a_valid_username_in_the_username_text_box() {
         // Implement username entry logic here
+        WebDriverUtils.driver.findElement(By.xpath(TestProperties.GOOGLE_SIGNIN_BUTTON_XPATH)).click();
+        WebDriverUtils.driver.findElement(By.xpath(TestProperties.GOOGLE_EMAIL_FIELD_XPATH)).sendKeys(TestProperties.TEST_EMAIL);
+        WebDriverUtils.driver.findElement(By.xpath(TestProperties.GOOGLE_NEXT_BUTTON_XPATH)).click();   
         System.out.println("User entered valid username");
     }
 
@@ -31,6 +37,6 @@ public class LoginSteps {
     public void the_user_is_redirected_to_the_landing_page() {
         // Implement validation logic here
         System.out.println("User successfully redirected to landing page");
-        WebDriverUtils.tearDown();
+        //WebDriverUtils.tearDown();
     }
 }
