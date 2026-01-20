@@ -6,3 +6,17 @@ Feature: Login Scenarios
         When the user enters a valid username in the username text box
         And the user enters a valid password in the password text box
         Then the user is redirected to the landing page
+
+
+    @smoke
+    Scenario: Login2
+        Given a user is on the login page
+
+
+    @smoke
+    Scenario: Login3
+        Given a user is on the login page
+    
+    @smoke
+    Scenario: Login4
+        Given a user is on the login page        
