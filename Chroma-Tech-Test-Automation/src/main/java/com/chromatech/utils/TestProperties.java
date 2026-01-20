@@ -20,9 +20,11 @@ public class TestProperties {
     
     public static final String FORGOT_PASSWORD = "//a[contains(@class, 'forgot)]";
     // Test data
-    public static final String TEST_EMAIL = "rich944@gmail.com";
+    public static final String TEST_EMAIL = "general@teacher.com";
 
-    //public static final String TEST_PASSWORD = "OpenTable2023!"; // Replace with a secure password
+    public static final String TEST_PASSWORD = "123456";
 
+    public static final String DASHBOARD_TITLE = "Login : Chroma Tech Academy";  
 
+    
 }
