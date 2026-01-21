@@ -24,7 +24,10 @@ public class TestProperties {
 
     public static final String TEST_PASSWORD = "123456";
 
-    public static final String DASHBOARD_TITLE = "Login : Chroma Tech Academy";  
+    public static final String DASHBOARD_TITLE = "Chroma Tech Academy";  
+
+    public static final String DASHBOARD_URL = "https://mexil.it/chroma/admin/admin/dashboard";    
+
 
     
 }

@@ -35,7 +35,7 @@ public class WebDriverUtils {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         
         // Initialize explicit wait
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
