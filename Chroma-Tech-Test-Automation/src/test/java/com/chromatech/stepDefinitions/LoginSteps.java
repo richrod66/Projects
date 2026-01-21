@@ -4,11 +4,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import com.chromatech.utils.WebDriverUtils;
-import org.openqa.selenium.By;
+import com.chromatech.pages.LoginPage;
 import com.chromatech.utils.TestProperties;
 
 public class LoginSteps {
 
+    LoginPage loginPage = new LoginPage();
+    
     @Given("a user is on the login page of {string}")
     public void a_user_is_on_the_login_page_of(String BASE_URL) {
         WebDriverUtils.driver.get(BASE_URL);
@@ -17,22 +19,18 @@ public class LoginSteps {
 
     @When("a user enters username {string} in the username text box")
     public void a_user_enters_username_in_the_username_text_box(String USERNAME) throws InterruptedException {
-    // Write code here that turns the phrase above into concrete actions
-    WebDriverUtils.driver.findElement(By.xpath(TestProperties.USERNNAME)).sendKeys(USERNAME);
+    loginPage.usernameField.sendKeys(USERNAME);
       
     }
 
     @When("a user enters password {string} in the password text box")
     public void a_user_enters_password_in_the_password_text_box(String PASSWORD) throws InterruptedException {
-    // Write code here that turns the phrase above into concrete actions
-    WebDriverUtils.driver.findElement(By.xpath(TestProperties.PASSWORD)).sendKeys(PASSWORD);
-      
+    loginPage.passwordField.sendKeys(PASSWORD);  
     }
 
     @When("a user clicks on the Sign In button")
     public void a_user_clicks_on_the_Sign_In_button() throws InterruptedException {
-    // Write code here that turns the phrase above into concrete actions
-    WebDriverUtils.driver.findElement(By.xpath(TestProperties.SIGNIN_BUTTON)).click();
+    loginPage.signInButton.click();
     
     }
 
