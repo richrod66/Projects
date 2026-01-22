@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import com.chromatech.utils.WebDriverUtils;
+
 import com.chromatech.pages.LoginPage;
 import com.chromatech.utils.TestProperties;
 
@@ -47,7 +48,18 @@ public class LoginSteps {
        
         System.out.println("** User successfully redirected to dashboard page. **");
 
+        WebDriverUtils.tearDown();
+
         
+    }
+
+    @Then("the user is shown an error message indicating invalid credentials")
+    public void the_user_is_shown_an_error_message_indicating_invalid_credentials() {
+    System.out.println("Checking for invalid credentials message...");
+    Boolean isvisible = loginPage.invalidCredentialsMessage.isDisplayed();
+    assert isvisible : "** Invalid credentials message is not displayed. **";
+    System.out.println("** Invalid credentials message is displayed. **");
+    WebDriverUtils.tearDown();
     }
 
 

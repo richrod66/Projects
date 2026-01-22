@@ -25,5 +25,8 @@ public class LoginPage {
     @FindBy(xpath = "//a[contains(@class, 'forgot')]")
     public WebElement forgotPasswordLink;
 
+    @FindBy(xpath = "//*[contains(@class, 'alert-danger')]")
+    public WebElement invalidCredentialsMessage;
+
 
 }
