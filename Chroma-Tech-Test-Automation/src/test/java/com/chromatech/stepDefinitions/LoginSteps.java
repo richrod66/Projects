@@ -55,10 +55,16 @@ public class LoginSteps {
 
     @Then("the user is shown an error message indicating invalid credentials")
     public void the_user_is_shown_an_error_message_indicating_invalid_credentials() {
-    System.out.println("Checking for invalid credentials message...");
+    System.out.println("** Checking for invalid credentials message... **");
     Boolean isvisible = loginPage.invalidCredentialsMessage.isDisplayed();
     assert isvisible : "** Invalid credentials message is not displayed. **";
+    
+    var messageElement = loginPage.invalidCredentialsMessage.getText();
+    System.out.println("the messageElemtne is "+messageElement );
+    assert messageElement.contains("Invalid Username or Password") : "** The error message text is incorrect. Actual message: " + messageElement + " **";   
+    
     System.out.println("** Invalid credentials message is displayed. **");
+    
     WebDriverUtils.tearDown();
     }
 

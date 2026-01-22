@@ -1,6 +1,6 @@
 Feature: Login Scenarios
 
-    @smoke
+    @Smoke
     Scenario: Login
         Given a user is on the login page of "<BASE_URL>"
         When a user enters username "<USERNAME>" in the username text box
@@ -14,7 +14,7 @@ Feature: Login Scenarios
       
 
 
-    @smoke
+    @DataDrivenTest
     Scenario Outline: bad login
         Given a user is on the login page of "<BASE_URL>"
         When a user enters username "<USERNAME>" in the username text box
