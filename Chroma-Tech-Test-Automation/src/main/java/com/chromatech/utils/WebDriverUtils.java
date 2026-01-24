@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
+import java.util.Objects;
 
 public class WebDriverUtils {
 
@@ -34,11 +35,11 @@ public class WebDriverUtils {
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().pageLoadTimeout(Objects.requireNonNull(Duration.ofSeconds(30)));
+        driver.manage().timeouts().implicitlyWait(Objects.requireNonNull(Duration.ofSeconds(20)));
         
         // Initialize explicit wait
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Objects.requireNonNull(Duration.ofSeconds(20)));
     }
 
     public static void tearDown() {

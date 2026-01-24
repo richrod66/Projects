@@ -14,8 +14,10 @@ public class LoginSteps {
     
     @Given("a user is on the login page of {string}")
     public void a_user_is_on_the_login_page_of(String BASE_URL) {
-        WebDriverUtils.driver.get(BASE_URL);
-        System.out.println("Navigated to: " + BASE_URL);
+        if (BASE_URL != null) {
+            WebDriverUtils.driver.get(BASE_URL);
+            System.out.println("Navigated to: " + BASE_URL);
+        }
     }
 
     @When("a user enters username {string} in the username text box")
@@ -43,8 +45,8 @@ public class LoginSteps {
         System.out.println("Actual page title is: " + title);
         System.out.println("Current URL is: " + currentUrl);
 
-        assert title.contains(TestProperties.DASHBOARD_TITLE) : "** User is not on the dashboard page. The Current page is: " + title + " **";
-        assert WebDriverUtils.driver.getCurrentUrl().equals(TestProperties.DASHBOARD_URL) : "** User is not on the dashboard page. The Current URL is: " + WebDriverUtils.driver.getCurrentUrl() + " **"; 
+        assert title != null && title.contains(TestProperties.DASHBOARD_TITLE) : "** User is not on the dashboard page. The Current page is: " + title + " **";
+        assert currentUrl != null && currentUrl.equals(TestProperties.DASHBOARD_URL) : "** User is not on the dashboard page. The Current URL is: " + currentUrl + " **"; 
        
         System.out.println("** User successfully redirected to dashboard page. **");
 
